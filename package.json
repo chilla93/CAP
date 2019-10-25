@@ -1,0 +1,22 @@
+{
+  "name": "cap",
+  "version": "1.0.0",
+  "description": "SCREEN CAP. NO CAP.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chilla93/CAP.git"
+  },
+  "author": "Chilla Tenga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chilla93/CAP/issues"
+  },
+  "homepage": "https://github.com/chilla93/CAP#readme",
+  "dependencies": {
+    "ffmpeg-static": "2.7.0"
+  }
+}
