@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+// production
+// require('../lib/main.js')
+
+//development
+require('../dist/main.js')

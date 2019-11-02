@@ -9,6 +9,7 @@ I want to create gifs* This is an excuse to create a custom solution for that.  
 - [Table of Contents](#table-of-contents)
 - [Project definitions](#project-definitions)
 - [Options](#options)
+- [Good to remember](#good-to-remember)
 
 # Project definitions
 
@@ -34,3 +35,7 @@ The application user defined options when creating/capturing content
   - defined by file size, or resolution size. (will be defined by the resolution of the content at first)
 - define start time offset
 - define duration
+
+# Good to remember
+
+- in order to have correct filesystem permissions to run the file directly, run `chmod +x bin/cap` or `chmod u+x bin/cap`, if you would like it to be user specific

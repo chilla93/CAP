@@ -1,5 +1,5 @@
 {
-  "name": "cap",
+  "name": "desk-cap",
   "version": "1.0.0",
   "description": "SCREEN CAP. NO CAP.",
   "private": true,
@@ -7,7 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "watch": "webpack --watch",
-    "debug": "node --inspect-brk=5260 dist/main.js"
+    "debug": "webpack && node --inspect-brk=5260 dist/main.js",
+    "prestart": "webpack",
+    "start": "node dist/main.js",
+    "prepare": "./prepare-for-publish"
+  },
+  "bin": {
+    "cap": "bin/cap"
   },
   "repository": {
     "type": "git",
@@ -20,7 +26,8 @@
   },
   "homepage": "https://github.com/chilla93/CAP#readme",
   "dependencies": {
-    "ffmpeg-static": "2.7.0"
+    "ffmpeg-static": "2.7.0",
+    "minimist": "^1.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
