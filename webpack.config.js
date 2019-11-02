@@ -11,6 +11,7 @@ module.exports = {
             { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
         ]
     },
-    mode: "production",
+    mode: "development",
+    devtool: "inline-source-maps",
     target: "node"
 }
