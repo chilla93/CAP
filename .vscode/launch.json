@@ -15,14 +15,6 @@
             "timeout": 30000,
             "stopOnEntry": false
         },
-        // {
-        //     "type": "node",
-        //     "request": "attach",
-        //     "name": "Node: Nodemon",
-        //     "processId": "${command:PickProcess}",
-        //     "restart": true,
-        //     "protocol": "inspector",
-        // },
         {
             "name": "Launch Node ES6",
             "type": "node",
@@ -34,23 +26,5 @@
             "outFiles": ["${workspaceFolder}/dist/**/*.js"],
             "port": 5260
         },
-        // {
-        //     "type": "node",
-        //     "request": "launch",
-        //     "name": "Launch Program",
-        //     "stopOnEntry": false,
-        //     "args": [],
-        //     "cwd": "${workspaceFolder}",
-        //     "preLaunchTask": null,
-        //     "runtimeExecutable": "npm",
-        //     "runtimeArgs": [
-        //         "run-script", "start"
-        //     ],
-        //     "env": {
-        //         "NODE_ENV": "development"
-        //     },
-        //     "console": "integratedTerminal",
-        //     "port": 9229
-        // }
     ]
 }
