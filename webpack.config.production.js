@@ -11,6 +11,10 @@ module.exports = {
             { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
         ]
     },
+    node: {
+        __filename: true,
+        __dirname: true,
+    },
     mode: "production",
     target: "node"
 }

@@ -1,19 +1,19 @@
 import { spawn, exec } from "child_process";
-import path from "path";
 import ffmpeg from "ffmpeg-static";
+import minimist from "minimist";
 
 console.log("hello CAP world")
-// var pathToModule = require.resolve('ffmpeg-static');
-// var pathToModule = path.dirname(require.resolve('ffmpeg-static'));
 var f = ffmpeg.path;
 
 console.log(f);
+// console.log(process.argv)
+// console.log(process.argv.slice(2))
 
-// exec(`${pathToModule}${f}`, (error, stdout, stderr) => {
-//     if (error) {
-//         console.error(`exec error: ${error}`);
-//         return;
-//     }
-//     console.log(`stdout: ${stdout}`);
-//     console.error(`stderr: ${stderr}`);
-// });
+exec(`${f} -version`, (error, stdout, stderr) => {
+    if (error) {
+        console.error(`exec error: ${error}`);
+        return;
+    }
+    console.log(`stdout: ${stdout}`);
+    console.error(`stderr: ${stderr}`);
+});
