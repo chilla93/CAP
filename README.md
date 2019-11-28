@@ -12,6 +12,8 @@ I want to create gifs* This is an excuse to create a custom solution for that.  
 - [Good to remember](#good-to-remember)
 - [FFMPEG](#ffmpeg)
   - [Commands](#commands)
+    - [Example 1: General Recording](#example-1-general-recording)
+    - [Example 2: Encoding livestream to an output using a constant bitrate](#example-2-encoding-livestream-to-an-output-using-a-constant-bitrate)
   - [H.264 Encoding](#h264-encoding)
     - [Rate Control](#rate-control)
       - [Constant Rate Factor](#constant-rate-factor)
@@ -49,6 +51,20 @@ The application user defined options when creating/capturing content
 # FFMPEG
 
 ## Commands
+
+### Example 1: General Recording
+
+```bash
+$ ffmpeg -y -f avfoundation -i "1:0" -vcodec libx264 -preset fast -pix_fmt yuv420p -crf 17 -r 30 out.mp4
+```
+
+Use avfoundation to capture video device with index 1 and audio device of index 0. Use the video encoding tool libx264. preset fast with a control rate factor of 17. control framerate output framerate at 30fps.
+
+### Example 2: Encoding livestream to an output using a constant bitrate
+
+```bash
+$ ffmpeg -y -f avfoundation -i "1:0" -vcodec libx264 -preset fast -pix_fmt yuv420p -r 30 -b:v 1500k -bufsize 1500k -maxrate 7000k out.mp4
+```
 
 ## H.264 Encoding
 
