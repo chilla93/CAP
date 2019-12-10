@@ -135,11 +135,10 @@ Use this method if you are targeting a specific output file size
   - In pass 1, you can leave audio out by specifying `-an`
 
  Terminal:
- 
-    ```bash
-    $ ffmpeg -y -i input -c:v libx264 -b:v 2600k -pass 1 -an -f mp4 /dev/null && \
-    ffmpeg -i input -c:v libx264 -b:v 2600k -pass 2 -c:a aac -b:a 128k output.mp4
-    ```
+  ```bash
+  $ ffmpeg -y -i input -c:v libx264 -b:v 2600k -pass 1 -an -f mp4 /dev/null && \
+  ffmpeg -i input -c:v libx264 -b:v 2600k -pass 2 -c:a aac -b:a 128k output.mp4
+  ```
 
 
 

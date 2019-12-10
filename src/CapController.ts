@@ -1,13 +1,14 @@
-import TerminalService from "./TerminalService";
+import TerminalService from "./Services/TerminalService";
 import minimist from "minimist";
+import StreamService from "./Services/StreamService";
 
 export default class CapController {
-    private terminalService: TerminalService;
+    private streamService: StreamService;
     constructor(){
-        this.terminalService = new TerminalService();
+        this.streamService = new StreamService();
     }
 
     capture(){
-        console.log("start desktop capture");
+        this.streamService.capture();
     }
 }
