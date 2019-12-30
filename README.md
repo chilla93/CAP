@@ -55,7 +55,7 @@ The application user defined options when creating/capturing content
 ### Example 1: General Recording
 
 ```bash
-$ ffmpeg -y -f avfoundation -i "1:0" -vcodec libx264 -preset fast -pix_fmt yuv420p -crf 17 -r 30 out.mp4
+$ ffmpeg -y -f avfoundation -framerate 30 -i "1:0" -vcodec libx264 -preset fast -pix_fmt yuv420p -crf 17 -r 30 out.mp4
 ```
 
 Use avfoundation to capture video device with index 1 and audio device of index 0. Use the video encoding tool libx264. preset fast with a control rate factor of 17. control framerate output framerate at 30fps.

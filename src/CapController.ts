@@ -9,6 +9,6 @@ export default class CapController {
     }
 
     capture(){
-        this.streamService.capture();
+        this.streamService.grabDesktop();
     }
 }

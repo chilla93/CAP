@@ -20,6 +20,10 @@ export default class BaseService {
         });
     }
 
+    write(content: string | Uint8Array): boolean{
+        return process.stdout.write(content)
+    }
+
     interval(): void{      
         process.stdout.write('\x1B[34m');
         console.log("we are starting the timer");
