@@ -10,7 +10,10 @@
     "debug": "webpack && node --inspect-brk=5260 dist/main.js",
     "prestart": "webpack",
     "start": "node dist/main.js",
-    "prepare": "./prepare-for-publish"
+    "prepare": "./prepare-for-publish",
+    "build:types": "tsc --emitDeclarationOnly",
+    "check-types": "tsc --noEmit",
+    "babel-play": "babel src/index.js --out-dir dist"
   },
   "bin": {
     "cap": "bin/cap"
@@ -26,24 +29,32 @@
   },
   "homepage": "https://github.com/chilla93/CAP#readme",
   "dependencies": {
+    "@babel/runtime": "^7.7.7",
     "@types/moment": "^2.13.0",
+    "babel-plugin-transform-typescript-metadata": "^0.2.2",
     "ffmpeg-static": "2.7.0",
+    "meow": "^6.0.0",
     "minimist": "^1.2.0",
     "moment": "^2.24.0",
+    "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-decorators": "^7.7.4",
     "@babel/plugin-proposal-numeric-separator": "^7.7.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.6",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-typescript": "^7.7.4",
     "@types/ffmpeg-static": "^2.0.0",
+    "@types/meow": "^5.0.0",
     "@types/minimist": "^1.2.0",
     "@types/node": "^12.12.14",
     "babel-loader": "^8.0.6",
+    "ts-loader": "^6.2.1",
     "typescript": "^3.7.2",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9"

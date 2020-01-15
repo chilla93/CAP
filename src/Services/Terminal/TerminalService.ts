@@ -1,4 +1,4 @@
-import BaseService from "./BaseService";
+import BaseService from "../BaseService";
 import { interval, Subscription } from 'rxjs';
 import moment from "moment";
 // import {timeInterval} from 'rxjs/operators';

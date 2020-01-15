@@ -1,10 +1,20 @@
 {
   "presets": [
-      "@babel/preset-env",
+    ["@babel/preset-env"],
+    // "@babel/preset-stage-2"
       "@babel/typescript"
   ],
   "plugins": [
-      "@babel/proposal-class-properties",
-      "@babel/proposal-object-rest-spread"
+    "babel-plugin-transform-typescript-metadata",
+    ["@babel/plugin-proposal-decorators", {"legacy": true}],
+    ["@babel/plugin-proposal-class-properties"],
+    "@babel/proposal-object-rest-spread"
+      // ["@babel/plugin-transform-runtime", {
+      //   "corejs": false,
+      //   "helpers": true,
+      //   "regenerator": false,
+      //   "useESModules": true,
+      //   "version": "7.6.4"
+      // }]
   ]
 }
