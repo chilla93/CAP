@@ -34,7 +34,7 @@
     "babel-plugin-transform-typescript-metadata": "^0.2.2",
     "ffmpeg-static": "2.7.0",
     "meow": "^6.0.0",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.2",
     "moment": "^2.24.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.3"
